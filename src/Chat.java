@@ -10,12 +10,7 @@ public class Chat {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
-        /*int h = 0;
-        int e = 0;
-        int l1 = 0;
-        int l2 = 0;
-        int o = 0;*/
-        boolean hOn1 = false;
+
         int h, e, l1, l2, o;
         h = e = l1 = l2 = o = 0;
 
