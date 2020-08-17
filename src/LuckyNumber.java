@@ -20,14 +20,22 @@ public class LuckyNumber {
 
         String stringOfCount = Integer.toString(countOfLuckyNumber);
 
+        boolean isLucky = true;
         for (int i = 0; i < stringOfCount.length(); i++) {
             char c = stringOfCount.charAt(i);
             if (c != '4' && c != '7') {
-                System.out.println("NO");
+                isLucky = false;
                 break;
-            } else if (i == stringOfCount.length() - 1 && c == '4' || c == '7') {
-                System.out.println("YES");
             }
+//            if (c != '4' && c != '7') {
+//                System.out.println("NO");
+//                break;
+//            } else if (i == stringOfCount.length() - 1 && c == '4' || c == '7') {
+//                System.out.println("YES");
+//            }
         }
+
+        if (isLucky) System.out.println("YES");
+        else System.out.println("NO");
     }
 }
