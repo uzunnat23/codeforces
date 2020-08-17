@@ -12,11 +12,14 @@ import java.util.Scanner;
 public class Trolley {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numOfStops = scanner.nextInt();
-        int entered, became, maxPas;
+        int numOfStops = scanner.nextInt() - 1;
+/*
+       int entered, became, maxPas;
         entered = became = maxPas = 0;
+*/
         scanner.nextLine();
-
+/*
+The first way:
         for (int i = 0; i < numOfStops; i++) {
             for (int j = 0; j < 2; j++) {
                 int t = scanner.nextInt();
@@ -27,5 +30,15 @@ public class Trolley {
             }
         }
         System.out.println(Math.abs(maxPas));
+*/
+//The second way:
+        int cur = 0;
+        int max = 0;
+        scanner.nextInt();
+        while (numOfStops-- != 0) {
+            max = Math.max(max, cur += scanner.nextInt());
+            cur -= scanner.nextInt();
+        }
+        System.out.println(max);
     }
 }
